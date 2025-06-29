@@ -53,13 +53,9 @@ if (!file_exists(UPLOAD_DIR)) {
 define('MAX_UPLOAD_SIZE', 5 * 1024 * 1024); // 5 ميجابايت
 define('ALLOWED_FILE_TYPES', ['image/jpeg', 'image/png', 'image/gif', 'application/pdf']);
 
-// إعدادات البريد الإلكتروني
-define('MAIL_HOST', $dotenv['MAIL_HOST']);
-define('MAIL_PORT', $dotenv['MAIL_PORT']);
-define('MAIL_USERNAME', $dotenv['MAIL_USERNAME']);
-define('MAIL_PASSWORD', $dotenv['MAIL_PASSWORD']);
-define('MAIL_FROM_EMAIL', $dotenv['MAIL_FROM_EMAIL']);
-define('MAIL_FROM_NAME', $dotenv['MAIL_FROM_NAME'] ?? SITE_NAME);
+// إعدادات البريد الإلكتروني (تم نقلها للأعلى مع القيم الافتراضية)
+// تعريف SITE_NAME إذا لم يكن معرفاً
+define('SITE_NAME', $dotenv['SITE_NAME'] ?? 'إبداع العرب');
 
 // مفاتيح API
 define('RECAPTCHA_SITE_KEY', $dotenv['RECAPTCHA_SITE_KEY']);

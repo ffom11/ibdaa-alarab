@@ -45,10 +45,14 @@ else
     echo ".env file already exists, skipping creation."
 fi
 
+# Create storage and cache directories if they don't exist
+mkdir -p /var/www/html/storage/framework/{sessions,views,cache}
+mkdir -p /var/www/html/bootstrap/cache
+
 # Set file permissions
 chown -R www-data:www-data /var/www/html
-chmod -R 755 /var/www/html/storage
-chmod -R 755 /var/www/html/bootstrap/cache
+chmod -R 775 /var/www/html/storage
+chmod -R 775 /var/www/html/bootstrap/cache
 
 # Run the original command (Apache in this case)
 exec "$@"

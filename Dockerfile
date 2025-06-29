@@ -14,8 +14,13 @@ RUN apt-get update && apt-get install -y \
 # Enable Apache modules
 RUN a2enmod rewrite
 
-# Copy application files
-COPY . /var/www/html/
+# Create public directory
+RUN mkdir -p /var/www/html/public
+
+# Copy only necessary files to keep the image small
+COPY public/ /var/www/html/public/
+COPY includes/ /var/www/html/includes/
+COPY config/ /var/www/html/config/
 
 # Set working directory
 WORKDIR /var/www/html

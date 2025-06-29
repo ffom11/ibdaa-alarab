@@ -1,8 +1,14 @@
 # تمكين إعادة الكتابة
 RewriteEngine On
+RewriteBase /
 
 # تعيين الصفحة الافتراضية
 DirectoryIndex index.php index.html
+
+# إعادة توجيه جميع الطلبات إلى index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/$1 [L]
 
 # حماية ملفات النظام
 <FilesMatch "^\.">

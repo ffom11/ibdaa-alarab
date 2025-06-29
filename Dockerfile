@@ -24,6 +24,7 @@ RUN mkdir -p /var/www/html/public
 COPY public/ /var/www/html/public/
 COPY includes/ /var/www/html/includes/
 COPY config/ /var/www/html/config/
+COPY .htaccess /var/www/html/public/
 
 # Set working directory
 WORKDIR /var/www/html

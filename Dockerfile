@@ -12,7 +12,9 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
 
 # Enable Apache modules
-RUN a2enmod rewrite
+RUN a2enmod rewrite \
+    && a2enmod headers \
+    && a2enmod expires
 
 # Set ServerName to localhost
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
@@ -24,7 +26,11 @@ RUN mkdir -p /var/www/html/public
 COPY public/ /var/www/html/public/
 COPY includes/ /var/www/html/includes/
 COPY config/ /var/www/html/config/
-COPY .htaccess /var/www/html/public/
+
+# Copy configuration files
+COPY .htaccess /var/www/html/
+COPY public/.htaccess /var/www/html/public/
+COPY apache-config.conf /etc/apache2/conf-available/000-default.conf
 
 # Set working directory
 WORKDIR /var/www/html

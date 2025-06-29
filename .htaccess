@@ -1,4 +1,5 @@
 # تمكين إعادة الكتابة
+Options +FollowSymLinks -MultiViews
 RewriteEngine On
 RewriteBase /
 

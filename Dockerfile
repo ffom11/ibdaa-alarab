@@ -32,11 +32,18 @@ COPY .htaccess /var/www/html/
 COPY public/.htaccess /var/www/html/public/
 COPY apache-config.conf /etc/apache2/conf-available/000-default.conf
 
-# Copy environment file
-COPY .env /var/www/html/.env
+# Copy entrypoint script
+COPY docker-entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 # Set working directory
 WORKDIR /var/www/html
+
+# Set entrypoint
+ENTRYPOINT ["docker-entrypoint.sh"]
+
+# Default command
+CMD ["apache2-foreground"]
 
 # Change document root for Apache
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
@@ -46,5 +53,3 @@ RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf
 # Expose port 80
 EXPOSE 80
 
-# Start Apache
-CMD ["apache2-foreground"]

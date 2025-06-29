@@ -40,7 +40,7 @@ define('SESSION_SECURE', isset($_SERVER['HTTPS']));
 define('SESSION_HTTP_ONLY', true);
 
 // إعدادات التطبيق
-define('SITE_NAME', 'إبداع العرب');
+define('SITE_NAME', $dotenv['SITE_NAME'] ?? 'إبداع العرب');
 define('SITE_URL', $dotenv['APP_URL'] ?? 'https://ibdaa-alarab.com');
 define('ADMIN_EMAIL', $dotenv['ADMIN_EMAIL'] ?? 'admin@ibdaa-alarab.com');
 
@@ -52,10 +52,6 @@ if (!file_exists(UPLOAD_DIR)) {
 
 define('MAX_UPLOAD_SIZE', 5 * 1024 * 1024); // 5 ميجابايت
 define('ALLOWED_FILE_TYPES', ['image/jpeg', 'image/png', 'image/gif', 'application/pdf']);
-
-// إعدادات البريد الإلكتروني (تم نقلها للأعلى مع القيم الافتراضية)
-// تعريف SITE_NAME إذا لم يكن معرفاً
-define('SITE_NAME', $dotenv['SITE_NAME'] ?? 'إبداع العرب');
 
 // مفاتيح API
 define('RECAPTCHA_SITE_KEY', $dotenv['RECAPTCHA_SITE_KEY']);

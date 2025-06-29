@@ -5,18 +5,31 @@
  */
 
 // تحميل ملف البيئة
-$dotenv = parse_ini_file(__DIR__ . '/../.env');
+$envPath = __DIR__ . '/../.env';
+$dotenv = [];
+
+if (file_exists($envPath)) {
+    $dotenv = parse_ini_file($envPath);
+}
 
 // إعدادات البيئة
 define('ENVIRONMENT', $dotenv['APP_ENV'] ?? 'production');
 define('APP_DEBUG', filter_var($dotenv['APP_DEBUG'] ?? false, FILTER_VALIDATE_BOOLEAN));
 
 // إعدادات قاعدة البيانات
-define('DB_HOST', $dotenv['DB_HOST']);
-define('DB_NAME', $dotenv['DB_NAME']);
-define('DB_USER', $dotenv['DB_USER']);
-define('DB_PASS', $dotenv['DB_PASS']);
-define('DB_CHARSET', $dotenv['DB_CHARSET']);
+define('DB_HOST', $dotenv['DB_HOST'] ?? 'localhost');
+define('DB_NAME', $dotenv['DB_NAME'] ?? 'ibdaa_alarab');
+define('DB_USER', $dotenv['DB_USER'] ?? 'root');
+define('DB_PASS', $dotenv['DB_PASS'] ?? '');
+define('DB_CHARSET', $dotenv['DB_CHARSET'] ?? 'utf8mb4');
+
+// إعدادات البريد الإلكتروني
+define('MAIL_HOST', $dotenv['MAIL_HOST'] ?? 'smtp.mailtrap.io');
+define('MAIL_PORT', $dotenv['MAIL_PORT'] ?? 2525);
+define('MAIL_USERNAME', $dotenv['MAIL_USERNAME'] ?? '');
+define('MAIL_PASSWORD', $dotenv['MAIL_PASSWORD'] ?? '');
+define('MAIL_FROM_EMAIL', $dotenv['MAIL_FROM_EMAIL'] ?? 'noreply@ibdaa-alarab.com');
+define('MAIL_FROM_NAME', $dotenv['MAIL_FROM_NAME'] ?? 'إبداع العرب');
 
 // إعدادات الجلسة
 define('SESSION_NAME', 'ebdaa_sess');

@@ -32,6 +32,9 @@ COPY .htaccess /var/www/html/
 COPY public/.htaccess /var/www/html/public/
 COPY apache-config.conf /etc/apache2/conf-available/000-default.conf
 
+# Copy environment file
+COPY .env /var/www/html/.env
+
 # Set working directory
 WORKDIR /var/www/html
 

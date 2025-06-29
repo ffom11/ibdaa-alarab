@@ -14,6 +14,9 @@ RUN apt-get update && apt-get install -y \
 # Enable Apache modules
 RUN a2enmod rewrite
 
+# Set ServerName to localhost
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
 # Create public directory
 RUN mkdir -p /var/www/html/public
 

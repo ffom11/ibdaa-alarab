@@ -1,0 +1,34 @@
+# ملفات النظام
+.DS_Store
+Thumbs.db
+
+# ملفات البيئة
+.env
+.env.*
+!.env.example
+
+# مجلدات التبعيات
+/vendor/
+/node_modules/
+
+# ملفات السجلات
+*.log
+logs/
+
+# مجلد التحميلات
+/assets/uploads/*
+!/assets/uploads/.gitkeep
+
+# ملفات التكوين المحلية
+/config/*.local.php
+
+# ملفات التطوير
+.phpunit.result.cache
+.php-cs-fixer.cache
+
+# محرر الأكواد
+.vscode/
+.idea/
+*.sublime-*
+
+.vercel

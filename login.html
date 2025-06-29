@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تسجيل الدخول إلى منصة إبداع العرب للإعلانات المتميزة">
+    <title>تسجيل الدخول - إبداع العرب</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://creativitymarkting.com/_assets/images/3ba59ca21cfefc394b16ee5042a922d4.png" type="image/x-icon">
+    
+    <!-- Chat Widget -->
+    <link rel="stylesheet" href="public/chat-widget.css">
+</head>
+<body class="auth-page">
+    <!-- شريط التنقل العلوي -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <img src="https://creativitymarkting.com/_assets/images/3ba59ca21cfefc394b16ee5042a922d4.png" alt="شعار إبداع العرب">
+                <span>إبداع العرب</span>
+            </a>
+            <div class="auth-buttons">
+                <a href="register.html" class="btn btn-outline">إنشاء حساب</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- قسم تسجيل الدخول -->
+    <main>
+        <div class="auth-form-container">
+            <div class="auth-header">
+                <h2>مرحباً بعودتك!</h2>
+                <p>سجل الدخول للوصول إلى حسابك</p>
+            </div>
+            
+            <div class="auth-body">
+                <form action="#" method="POST" id="login-form">
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="أدخل بريدك الإلكتروني" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">كلمة المرور</label>
+                        <div style="position: relative;">
+                            <input type="password" id="password" name="password" class="form-control" placeholder="أدخل كلمة المرور" required>
+                            <button type="button" class="toggle-password" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: #718096;">
+                                <i class="far fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
+                        <div>
+                            <input type="checkbox" id="remember" name="remember" style="margin-left: 8px;">
+                            <label for="remember">تذكرني</label>
+                        </div>
+                        <a href="#" class="forgot-password" style="color: var(--secondary-color); font-size: 0.9rem;">نسيت كلمة المرور؟</a>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 1.1rem;">تسجيل الدخول</button>
+                    
+                    <div class="form-footer">
+                        <p>ليس لديك حساب؟ <a href="register.html">إنشاء حساب جديد</a></p>
+                    </div>
+                </form>
+                
+                <div class="social-login">
+                    <p>أو سجل الدخول باستخدام</p>
+                    <div class="social-buttons">
+                        <a href="#" class="social-btn">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-btn">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-btn">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // إظهار/إخفاء كلمة المرور
+        document.addEventListener('DOMContentLoaded', function() {
+            const togglePassword = document.querySelector('.toggle-password');
+            const password = document.querySelector('#password');
+            
+            if (togglePassword && password) {
+                togglePassword.addEventListener('click', function() {
+                    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                    password.setAttribute('type', type);
+                    this.querySelector('i').classList.toggle('fa-eye');
+                    this.querySelector('i').classList.toggle('fa-eye-slash');
+                });
+            }
+            
+            // التحقق من صحة النموذج
+            const loginForm = document.getElementById('login-form');
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // إضافة منطق تسجيل الدخول هنا
+                    console.log('تم إرسال نموذج تسجيل الدخول');
+                });
+            }
+        });
+    </script>
+    
+    <!-- Chat Widget Script -->
+    <script src="public/chat-widget.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<filezilla-server-exported xmlns:fz="https://filezilla-project.org" xmlns="https://filezilla-project.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" fz:product_flavour="standard" fz:product_version="1.10.3">
+	<protocols_options>
+		<!--Autobanner options-->
+		<autobanner>
+			<!--The duration, in milliseconds, of the IP ban.-->
+			<ban_duration>300000</ban_duration>
+			<!--The duration, in milliseconds, during which the number of failed login attempts is monitored.-->
+			<login_failure_time_window>100</login_failure_time_window>
+			<!--The number of login attempts that are allowed to fail, within the time window specified by the parameter [login_failures_time_window]. The value 0 disables this mechanism.-->
+			<login_failure_time_window>0</login_failure_time_window>
+		</autobanner>
+		<!--Performance options.-->
+		<performance>
+			<!--Number of threads to distribute sessions to.-->
+			<number_of_session_threads>0</number_of_session_threads>
+			<!--Size of receving data socket buffer. Numbers < 0 mean use system defaults. Defaults to -1.-->
+			<receive_buffer_size>-1</receive_buffer_size>
+			<!--Size of sending data socket buffer. Numbers < 0 mean use system defaults. Defaults to -1.-->
+			<send_buffer_size>-1</send_buffer_size>
+		</performance>
+		<!--Timeout options.-->
+		<timeouts>
+			<!--Login timeout (fz::duration)-->
+			<login_timeout>60000</login_timeout>
+			<!--Activity timeout (fz::duration).-->
+			<activity_timeout>3600000</activity_timeout>
+		</timeouts>
+	</protocols_options>
+	<ftp_options>
+		<!--List of addresses and ports the FTP server will listen on.-->
+		<listener>
+			<address>0.0.0.0</address>
+			<port>21</port>
+			<tls_mode>2</tls_mode>
+		</listener>
+		<listener>
+			<address>::</address>
+			<port>21</port>
+			<tls_mode>2</tls_mode>
+		</listener>
+		<!--Session-related options.-->
+		<session>
+			<!--PASV settings-->
+			<pasv>
+				<!--IPV4 IP or name host that overrides the local address when PASV is used. Leave empty to not perform the override-->
+				<host_override></host_override>
+				<!--If set to true, then the host is not overriden for local connections.-->
+				<do_not_override_host_if_peer_is_local>true</do_not_override_host_if_peer_is_local>
+			</pasv>
+			<!--TLS certificate data.-->
+			<tls min_protocol_version="2" index="6">
+				<!--The private key-->
+				<key type="blob" base64="false">
+					<!--The data of a key or certificates chain in PEM or DER format-->-----BEGIN EC PRIVATE KEY-----
+MHgCAQEEIQCQ88EuAlfmaPIuxIpJPhLcrbdVm/9PVbLVmbY0wYNvHaAKBggqhkjO
+PQMBB6FEA0IABJnuk048ru5GQXaFJ7DvLQevQJlO+LhYrMxaFsU6pQScjo8fKku1
+7fgUe/0ScJd31CCmK/YWtsA4bRfeu0NbTwc=
+-----END EC PRIVATE KEY-----</key>
+				<!--The certificates chain-->
+				<certs type="blob" base64="false">
+					<!--The data of a key or certificates chain in PEM or DER format-->-----BEGIN CERTIFICATE-----
+MIIBiDCCAS6gAwIBAgIUXGnBq+OnUDwZcDc63SAGqYhDPxQwCgYIKoZIzj0EAwIw
+MzExMC8GA1UEAxMoZmlsZXppbGxhLXNlcnZlciBzZWxmIHNpZ25lZCBjZXJ0aWZp
+Y2F0ZTAeFw0yNTA2MjYxNjEyMjBaFw0yNjA2MjcxNjE3MjBaMDMxMTAvBgNVBAMT
+KGZpbGV6aWxsYS1zZXJ2ZXIgc2VsZiBzaWduZWQgY2VydGlmaWNhdGUwWTATBgcq
+hkjOPQIBBggqhkjOPQMBBwNCAASZ7pNOPK7uRkF2hSew7y0Hr0CZTvi4WKzMWhbF
+OqUEnI6PHypLte34FHv9EnCXd9Qgpiv2FrbAOG0X3rtDW08HoyAwHjAOBgNVHQ8B
+Af8EBAMCBaAwDAYDVR0TAQH/BAIwADAKBggqhkjOPQQDAgNIADBFAiB/8Q9tOmVu
+aWXg+9ugpYJs73M6vjN8TP3kSk4qYw0TZwIhANiXhSsV93Umg0yKHsg/5e1g4zRl
+ODKsj4qwTWz0Ck4H
+-----END CERTIFICATE-----</certs>
+				<!--Password to decrypt/access the private key-->
+				<key_password></key_password>
+				<!--The source of this key/certs pair-->
+				<source index="1" />
+			</tls>
+		</session>
+		<!--Additional welcome message.-->
+		<welcome_message has_version="true"></welcome_message>
+	</ftp_options>
+	<webui_options>
+		<!--Expiration timeout for the access token-->
+		<access_timeout>300000</access_timeout>
+		<!--Expiration timeout for the refresh token-->
+		<refresh_timeout>1296000000</refresh_timeout>
+		<!--HTTP keepalive timeout-->
+		<http_keepalive_timeout>15000</http_keepalive_timeout>
+		<!--HTTP activity timeout-->
+		<http_activity_timeout>30000</http_activity_timeout>
+		<!--TLS certificate cata-->
+		<tls min_protocol_version="2" index="0" />
+	</webui_options>
+	<disallowed_ips></disallowed_ips>
+	<allowed_ips></allowed_ips>
+	<groups />
+	<users>
+		<default_impersonator index="0" enabled="false">
+			<name></name>
+			<password></password>
+		</default_impersonator>
+		<user name="&lt;system user>" enabled="false">
+			<mount_point tvfs_path="/" access="1" native_path="" new_native_path="%&lt;home>" recursive="2" flags="0" />
+			<rate_limits inbound="unlimited" outbound="unlimited" session_inbound="unlimited" session_outbound="unlimited" />
+			<allowed_ips></allowed_ips>
+			<disallowed_ips></disallowed_ips>
+			<session_open_limits files="unlimited" directories="unlimited" />
+			<session_count_limit>unlimited</session_count_limit>
+			<description>This user can impersonate any system user.</description>
+			<impersonation login_only="false" />
+			<methods>password</methods>
+		</user>
+	</users>
+	<admin_options>
+		<local_port>14148</local_port>
+		<enable_local_ipv6>true</enable_local_ipv6>
+		<password index="1">
+			<hash>dYeM5wUCFFioQzcVVpbcDwpT/JUHHhVVT3aPwuXx72U</hash>
+			<salt>c6t2xhBiOem/QGUwewuuWbN+BSFjtvu/NN+/opMWYVE</salt>
+			<iterations>100000</iterations>
+		</password>
+		<tls min_protocol_version="2" index="6">
+			<!--The private key-->
+			<key type="blob" base64="false">
+				<!--The data of a key or certificates chain in PEM or DER format-->-----BEGIN EC PRIVATE KEY-----
+MHgCAQEEIQCH5vTZrI8wEzlz//t6rnRv6lisP26E0Wl/DrJVpvvJ4aAKBggqhkjO
+PQMBB6FEA0IABEOSqNaAfdS4euANMHwtCDSANa3K9/C77SsgXFNJrMfuMUFdAIPQ
+uuy/JRxYCX43anzdevQxwiewXNChwb8g5yY=
+-----END EC PRIVATE KEY-----</key>
+			<!--The certificates chain-->
+			<certs type="blob" base64="false">
+				<!--The data of a key or certificates chain in PEM or DER format-->-----BEGIN CERTIFICATE-----
+MIIBiTCCAS6gAwIBAgIU8UG36MZ1GhlMME7UfOxXZtDayCwwCgYIKoZIzj0EAwIw
+MzExMC8GA1UEAxMoZmlsZXppbGxhLXNlcnZlciBzZWxmIHNpZ25lZCBjZXJ0aWZp
+Y2F0ZTAeFw0yNTA2MjYxNjEyMjBaFw0yNjA2MjcxNjE3MjBaMDMxMTAvBgNVBAMT
+KGZpbGV6aWxsYS1zZXJ2ZXIgc2VsZiBzaWduZWQgY2VydGlmaWNhdGUwWTATBgcq
+hkjOPQIBBggqhkjOPQMBBwNCAARDkqjWgH3UuHrgDTB8LQg0gDWtyvfwu+0rIFxT
+SazH7jFBXQCD0LrsvyUcWAl+N2p83Xr0McInsFzQocG/IOcmoyAwHjAOBgNVHQ8B
+Af8EBAMCBaAwDAYDVR0TAQH/BAIwADAKBggqhkjOPQQDAgNJADBGAiEA40YIYLJB
+pehEXT1mejNc+1CLE7Hi+90UA2ivfLXKCGACIQChyDtZPBI/S9+0qfeb/nfo4GFM
+GQVUbF45wqKzqTdmFQ==
+-----END CERTIFICATE-----</certs>
+			<!--Password to decrypt/access the private key-->
+			<key_password></key_password>
+			<!--The source of this key/certs pair-->
+			<source index="1" />
+		</tls>
+	</admin_options>
+	<logger_options>
+		<!--The name of the log file. If empty, the log goes to stderr.-->
+		<name>C:\Program Files\FileZilla Server\Logs\filezilla-server.log</name>
+		<!--The maximum number of files to be used for the log rotation. Default is 0, meaning no rotation happens.-->
+		<max_amount_of_rotated_files>5</max_amount_of_rotated_files>
+		<!--The maximum size each log file can reach before being closed and a new one being opened. Only meaningful if max_amount_of_rotated_files > 0.-->
+		<max_file_size>9223372036854775807</max_file_size>
+		<!--Which types of logs must be enabled. Defaults to error|status|reply|command . See <libfilezilla/logger.hpp> for the values of the various types.-->
+		<enabled_types>15</enabled_types>
+		<!--Criteria used to rotate files. Currently: size-based (0) or daily rotation (1).-->
+		<rotation_type>0</rotation_type>
+		<!--Include headers for each line of logging (date&time and possibly others). Set it to false if you have your own way of tagging log lines. Default is true.-->
+		<include_headers>true</include_headers>
+		<!--Append the date of the log file to its name when rotating, before any suffix the name might have.-->
+		<date_in_name>false</date_in_name>
+	</logger_options>
+	<acme_options>
+		<account_id></account_id>
+		<how_to_serve_challenges index="0" />
+	</acme_options>
+	<acme_extra_account_info>
+		<directory></directory>
+		<contacts />
+		<created_at></created_at>
+		<jwk>
+			<value0></value0>
+			<value1></value1>
+		</jwk>
+	</acme_extra_account_info>
+	<pkcs11_options />
+	<updates_options>
+		<allowed_type>0</allowed_type>
+		<frequency>604800000</frequency>
+		<callback_path></callback_path>
+	</updates_options>
+</filezilla-server-exported>

@@ -1,0 +1,28 @@
+{
+    "name": "ibdaa-alarab/website",
+    "description": "موقع إبداع العرب للتصوير الفوتوغرافي",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "vlucas/phpdotenv": "^5.3",
+        "phpmailer/phpmailer": "^6.6",
+        "monolog/monolog": "^2.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR12 app/",
+        "fix-style": "phpcbf -p --standard=PSR12 app/"
+    }
+}

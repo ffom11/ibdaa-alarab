@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="منصة إبداع العرب للتصوير الفوتوغرافي - نقدم خدمات إحترافية في التصوير وتحرير الفيديو والتصميم">
+    <meta name="keywords" content="تصوير فوتوغرافي, تصوير فديو, مونتاج, تصميم, إعلانات, تسويق, إبداع العرب">
+    <meta name="author" content="إبداع العرب">
+    <title>إبداع العرب | التصوير الفوتوغرافي وتحرير الفيديو</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/new-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Preload للخطوط والموارد الهامة -->
+    <link rel="preload" as="image" href="assets/images/hero-bg.jpg">
+    <link rel="preload" as="font" href="assets/fonts/Tajawal-Regular.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="assets/fonts/Tajawal-Bold.woff2" type="font/woff2" crossorigin>
+</head>
+<body>
+    <!-- شاشة التحميل -->
+    <div class="page-loader">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- شريط التنقل العلوي -->
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <a href="#" class="brand">
+                <img src="assets/images/logo.png" alt="شعار إبداع العرب" class="logo-img">
+                <span class="brand-text">إبداع العرب</span>
+            </a>
+            
+            <div class="menu" id="menu">
+                <ul class="menu-inner">
+                    <li class="menu-item"><a href="#home" class="menu-link active">الرئيسية</a></li>
+                    <li class="menu-item"><a href="#services" class="menu-link">خدماتنا</a></li>
+                    <li class="menu-item"><a href="#packages" class="menu-link">الباقات</a></li>
+                    <li class="menu-item"><a href="#portfolio" class="menu-link">معرض الأعمال</a></li>
+                    <li class="menu-item"><a href="#testimonials" class="menu-link">آراء العملاء</a></li>
+                    <li class="menu-item"><a href="#contact" class="menu-link">اتصل بنا</a></li>
+                </ul>
+            </div>
+            
+            <div class="menu-buttons">
+                <a href="login.html" class="btn btn-outline">تسجيل الدخول</a>
+                <a href="register.html" class="btn btn-primary">حساب جديد</a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="قائمة الهاتف">
+                    <span class="menu-toggle-line"></span>
+                    <span class="menu-toggle-line"></span>
+                </button>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="#" class="active">الرئيسية</a>
+                <a href="#packages">الباقات</a>
+                <a href="#features">المميزات</a>
+                <a href="#gallery">معرض الأعمال</a>
+                <a href="#contact">اتصل بنا</a>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">تسجيل الدخول</a>
+                    <a href="register.html" class="btn btn-primary">إنشاء حساب</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="hero-title">إبداع بلا حدود في عالم التصوير</h1>
+                <p class="hero-subtitle">نقدم لكم أفضل خدمات التصوير الفوتوغرافي وتحرير الفيديو والتصميم باحترافية عالية</p>
+                <div class="hero-buttons">
+                    <a href="#packages" class="btn btn-primary btn-lg">اكتشف باقاتنا</a>
+                    <a href="#contact" class="btn btn-outline btn-lg">احجز الآن</a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
+                <img src="assets/images/hero-image.png" alt="إبداع العرب - التصوير الفوتوغرافي">
+            </div>
+        </div>
+        
+        <div class="hero-shape">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,160L48,170.7C96,181,192,203,288,197.3C384,192,480,160,576,160C672,160,768,192,864,192C960,192,1056,160,1152,138.7C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        
+        <div class="hero-scroll">
+            <a href="#services" class="scroll-down">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+                <span class="arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <!-- قسم الباقات -->
+    <section id="packages" class="packages-section section-bg">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">خطواتنا نحو التميز</span>
+                <h2 class="section-title">باقاتنا الإعلانية</h2>
+                <div class="section-divider">
+                    <span></span>
+                    <i class="fas fa-camera"></i>
+                    <span></span>
+                </div>
+                <p class="section-description">اختر الباقة التي تناسب احتياجاتك واستمتع بأفضل العروض والخصومات الحصرية</p>
+            </div>
+            
+            <div class="packages-grid">
+                <div class="packages-container">
+                <div class="package-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="package-badge">الأكثر طلباً</div>
+                    <div class="package-header">
+                        <div class="package-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3 class="package-title">الباقة البرونزية</h3>
+                        <div class="package-price">
+                            <span class="amount">500</span>
+                            <span class="currency">ريال</span>
+                            <span class="period">/ للجلسة</span>
+                        </div>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features">
+                            <li class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>50 صورة عالية الجودة</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>تغطية لمدة 3 ساعات</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>معالجة وتعديل الصور</span>
+                            </li>
+                            <li class="feature-item not-included">
+                                <i class="fas fa-times-circle"></i>
+                                <span>فيديو تذكاري</span>
+                            </li>
+                            <li class="feature-item not-included">
+                                <i class="fas fa-times-circle"></i>
+                                <span>ألبوم صور فاخر</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <a href="#contact" class="btn btn-primary btn-block">احجز الآن</a>
+                        <a href="#" class="package-more">المزيد من التفاصيل <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </div>
+                <!-- الباقة الفضية -->
+                <div class="package-card featured animate-on-scroll">
+                    <div class="popular-tag">الأكثر طلباً</div>
+                    <div class="package-icon silver">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="package-header">
+                        <h3>الباقة الفضية</h3>
+                        <div class="price">1,500 <span>ريال</span></div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li><i class="fas fa-user-tie"></i> 5 معلنين محترفين</li>
+                            <li><i class="far fa-clock"></i> تغطية من 2-5 ساعات</li>
+                            <li><i class="fas fa-map-marker-alt"></i> تحديد الموقع والتوقيت</li>
+                            <li><i class="fas fa-photo-video"></i> صور وفيديوهات احترافية</li>
+                            <li><i class="fas fa-chart-pie"></i> تقارير أداء تفصيلية</li>
+                            <li><i class="fas fa-percentage"></i> خصم 10% على خدمات المونتاج</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="package-button" data-package="silver">احجز الآن <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <!-- الباقة الذهبية -->
+                <div class="package-card animate-on-scroll">
+                    <div class="package-icon gold">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="package-header">
+                        <h3>الباقة الذهبية</h3>
+                        <div class="price">3,000 <span>ريال</span></div>
+                    </div>
+                    <div class="package-features">
+                        <ul>
+                            <li><i class="fas fa-users"></i> 15 معلن محترف (نختارهم لك)</li>
+                            <li><i class="far fa-clock"></i> تغطية من 2-5 ساعات</li>
+                            <li><i class="fas fa-map-marked-alt"></i> تحديد الموقع والتوقيت</li>
+                            <li><i class="fas fa-film"></i> صور وفيديوهات عالية الجودة</li>
+                            <li><i class="fas fa-chart-bar"></i> تقارير أداء شاملة</li>
+                            <li><i class="fas fa-gift"></i> مونتاج فيديو هدية (نصف السعر)</li>
+                            <li><i class="fas fa-credit-card"></i> خيار الدفع بالتقسيط عبر تمارا</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="package-button" data-package="gold">احجز الآن <i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+            
+            <div class="package-note">
+                <p><i class="fas fa-info-circle"></i> ملاحظة: يجب الحجز قبل المناسبة ب 3-5 أيام على الأقل. غير مسموح بالحجز في نفس اليوم أو اليوم التالي.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="requirements">
+        <div class="container">
+            <h2>شروط الحجز</h2>
+            <ul>
+                <li>يجب الحجز قبل المناسبة ب 3-5 أيام على الأقل</li>
+                <li>غير مسموح بالحجز في نفس اليوم أو اليوم التالي</li>
+                <li>يتم تحديد الموقع والتوقيت مسبقاً</li>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">أعمالنا المميزة</span>
+                <h2 class="section-title">معرض الأعمال</h2>
+                <div class="section-divider">
+                    <span></span>
+                    <i class="fas fa-images"></i>
+                    <span></span>
+                </div>
+                <p class="section-description">نقدم لكم مجموعة من أبرز أعمالنا في مجال التصوير الفوتوغرافي وتحرير الفيديو</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-cta animate-on-scroll">
+                <p>هل ترغب في رؤية المزيد من أعمالنا؟</p>
+                <a href="#contact" class="btn primary-btn">تواصل معنا</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- نموذج الاتصال -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info animate-on-scroll">
+                    <div class="section-header">
+                        <h2>تواصل معنا</h2>
+                        <p>نحن هنا لمساعدتك في أي استفسار أو حجز</p>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>اتصل بنا</h3>
+                                <a href="tel:+966566166251">+966 56 616 6251</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>البريد الإلكتروني</h3>
+                                <a href="mailto:5atera.3abera@gmail.com">5atera.3abera@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>العنوان</h3>
+                                <p>الرياض، المملكة العربية السعودية</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-snapchat-ghost"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form animate-on-scroll">
+                    <h3>أرسل لنا رسالة</h3>
+                    <form id="booking-form" dir="rtl">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">الاسم الكامل</label>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required>
+                                <label for="email">البريد الإلكتروني</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" required>
+                                <label for="phone">رقم الجوال</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="package" name="package" required>
+                                <option value=""></option>
+                                <option value="bronze">الباقة البرونزية - 1,000 ريال</option>
+                                <option value="silver">الباقة الفضية - 1,500 ريال</option>
+                                <option value="gold">الباقة الذهبية - 3,000 ريال</option>
+                            </select>
+                            <label for="package">اختر الباقة</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="date" id="event-date" name="event-date" required min="">
+                            <label for="event-date">تاريخ المناسبة</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4"></textarea>
+                            <label for="message">تفاصيل إضافية (اختياري)</label>
+                        </div>
+                        
+                        <div class="form-group terms">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">أوافق على <a href="#">الشروط والأحكام</a> وسياسة الخصوصية</label>
+                        </div>
+                        
+                        <button type="submit" class="btn primary-btn btn-block">
+                            <i class="fas fa-paper-plane"></i> إرسال الطلب
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section id="services" class="services-section section-bg">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">خدماتنا المميزة</span>
+                <h2 class="section-title">نقدم لكم أفضل الحلول الإبداعية</h2>
+                <div class="section-divider">
+                    <span></span>
+                    <i class="fas fa-camera"></i>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>التصوير الفوتوغرافي</h3>
+                    <p>نقدم خدمات تصوير احترافية بجودة عالية تناسب احتياجاتك المختلفة</p>
+                    <a href="#contact" class="btn btn-outline">احجز الآن</a>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>تصوير الفيديو</h3>
+                    <p>إنتاج فيديوهات إحترافية بجودة 4K مع أحدث المعدات والتقنيات</p>
+                    <a href="#contact" class="btn btn-outline">احجز الآن</a>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>المونتاج والتصميم</h3>
+                    <p>تصميم فيديوهات إعلانية احترافية مع إضافة المؤثرات البصرية والرسوم المتحركة</p>
+                    <a href="#contact" class="btn btn-outline">احجز الآن</a>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-ad"></i>
+                    </div>
+                    <h3>التسويق الإلكتروني</h3>
+                    <p>حملات إعلانية متميزة على منصات التواصل الاجتماعي لزيادة وصولك للجمهور المستهدف</p>
+                    <a href="#contact" class="btn btn-outline">احجز الآن</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم العملاء -->
+    <section id="clients" class="clients-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">عملاؤنا الكرام</span>
+                <h2 class="section-title">شركاء النجاح</h2>
+                <div class="section-divider">
+                    <span></span>
+                    <i class="fas fa-handshake"></i>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="clients-slider" data-aos="fade-up">
+                <div class="client-logo">
+                    <img src="images/clients/client1.png" alt="عميل 1">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/client2.png" alt="عميل 2">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/client3.png" alt="عميل 3">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/client4.png" alt="عميل 4">
+                </div>
+                <div class="client-logo">
+                    <img src="images/clients/client5.png" alt="عميل 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <img src="https://creativitymarkting.com/_assets/images/3ba59ca21cfefc394b16ee5042a922d4.png" alt="شعار إبداع العرب" class="footer-logo">
+                    <p>منصة إبداع العرب توفر لك أفضل خدمات الإعلان المتميزة للمناسبات والاحتفالات بأسعار منافسة وجودة عالية.</p>
+                    <div class="footer-social">
+                        <a href="https://x.com/ibdaa_alarab" target="_blank" class="social-icon" title="تويتر"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/ibdaa_alarab" target="_blank" class="social-icon" title="انستقرام"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.snapchat.com/add/ibdaa_alarab" target="_blank" class="social-icon" title="سناب شات"><i class="fab fa-snapchat-ghost"></i></a>
+                        <a href="https://www.tiktok.com/@ibdaa_alarab" target="_blank" class="social-icon" title="تيك توك"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/966566166251" target="_blank" class="social-icon" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#packages">باقاتنا</a></li>
+                        <li><a href="#features">مميزاتنا</a></li>
+                        <li><a href="#gallery">معرض الأعمال</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>معلومات الاتصال</h3>
+                    <ul>
+                        <li><i class="fas fa-building"></i> مؤسسة إبداع العرب للتصوير الفوتوغرافي</li>
+                        <li><i class="fas fa-id-card"></i> رقم الترخيص: 81111</li>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+966566166251">0566166251</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:5atera.3abera@gmail.com">5atera.3abera@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 إبداع العرب. جميع الحقوق محفوظة</p>
+                <div class="footer-bottom-links">
+                    <a href="#">الشروط والأحكام</a>
+                    <a href="#">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- مكتبات JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    
+    <!-- ملفات JavaScript المخصصة -->
+    <script src="js/image-optimizer.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- تتبع Google Analytics (استبدل ID التتبع الخاص بك) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'YOUR-GA-ID');
+        
+        // تهيئة مكتبة AOS للرسوم المتحركة
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+        
+        // تهيئة Lightbox
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'alwaysShowNavOnTouchDevices': true,
+            'albumLabel': 'صورة %1 من %2'
+        });
+    </script>
+    
+    <!-- Chat Widget -->
+    <script src="public/chat-widget.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script>
+        // تفعيل القائمة المتنقلة
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    this.classList.toggle('active');
+                });
+            }
+            
+            // إغلاق القائمة عند النقر على رابط
+            const navItems = document.querySelectorAll('.nav-links a');
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                });
+            });
+            
+            // إضافة تأثير التمرير السلس للروابط الداخلية
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // إظهار/إخفاء زر العودة للأعلى
+            const backToTopButton = document.createElement('a');
+            backToTopButton.href = '#';
+            backToTopButton.className = 'back-to-top';
+            backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
+            document.body.appendChild(backToTopButton);
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="إنشاء حساب جديد في منصة إبداع العرب للإعلانات المتميزة">
+    <title>إنشاء حساب - إبداع العرب</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://creativitymarkting.com/_assets/images/3ba59ca21cfefc394b16ee5042a922d4.png" type="image/x-icon">
+    
+    <!-- Chat Widget -->
+    <link rel="stylesheet" href="public/chat-widget.css">
+</head>
+<body class="auth-page">
+    <!-- شريط التنقل العلوي -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <img src="https://creativitymarkting.com/_assets/images/3ba59ca21cfefc394b16ee5042a922d4.png" alt="شعار إبداع العرب">
+                <span>إبداع العرب</span>
+            </a>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline">تسجيل الدخول</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- قسم إنشاء الحساب -->
+    <main>
+        <div class="auth-form-container">
+            <div class="auth-header">
+                <h2>أنشئ حساباً جديداً</h2>
+                <p>انضم إلى مجتمع إبداع العرب واستفد من خدماتنا المميزة</p>
+            </div>
+            
+            <div class="auth-body">
+                <form action="#" method="POST" id="register-form">
+                    <div class="form-group">
+                        <label for="fullname">الاسم الكامل</label>
+                        <input type="text" id="fullname" name="fullname" class="form-control" placeholder="أدخل اسمك الكامل" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="أدخل بريدك الإلكتروني" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">رقم الجوال</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="أدخل رقم جوالك" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">كلمة المرور</label>
+                        <div style="position: relative;">
+                            <input type="password" id="password" name="password" class="form-control" placeholder="أدخل كلمة المرور" required>
+                            <button type="button" class="toggle-password" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: #718096;">
+                                <i class="far fa-eye"></i>
+                            </button>
+                        </div>
+                        <small style="display: block; margin-top: 5px; color: #6b7280;">يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">تأكيد كلمة المرور</label>
+                        <div style="position: relative;">
+                            <input type="password" id="confirm-password" name="confirm-password" class="form-control" placeholder="أعد إدخال كلمة المرور" required>
+                            <button type="button" class="toggle-confirm-password" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: #718096;">
+                                <i class="far fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" style="margin: 20px 0;">
+                        <div>
+                            <input type="checkbox" id="terms" name="terms" required style="margin-left: 8px;">
+                            <label for="terms">أوافق على <a href="#" style="color: var(--secondary-color);">الشروط والأحكام</a> و <a href="#" style="color: var(--secondary-color);">سياسة الخصوصية</a></label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 1.1rem;">إنشاء حساب</button>
+                    
+                    <div class="form-footer">
+                        <p>لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول</a></p>
+                    </div>
+                </form>
+                
+                <div class="social-login">
+                    <p>أو سجل الدخول باستخدام</p>
+                    <div class="social-buttons">
+                        <a href="#" class="social-btn">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="social-btn">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-btn">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // إظهار/إخفاء كلمة المرور
+        document.addEventListener('DOMContentLoaded', function() {
+            // كلمة المرور
+            const togglePassword = document.querySelector('.toggle-password');
+            const password = document.querySelector('#password');
+            
+            if (togglePassword && password) {
+                togglePassword.addEventListener('click', function() {
+                    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                    password.setAttribute('type', type);
+                    this.querySelector('i').classList.toggle('fa-eye');
+                    this.querySelector('i').classList.toggle('fa-eye-slash');
+                });
+            }
+            
+            // تأكيد كلمة المرور
+            const toggleConfirmPassword = document.querySelector('.toggle-confirm-password');
+            const confirmPassword = document.querySelector('#confirm-password');
+            
+            if (toggleConfirmPassword && confirmPassword) {
+                toggleConfirmPassword.addEventListener('click', function() {
+                    const type = confirmPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+                    confirmPassword.setAttribute('type', type);
+                    this.querySelector('i').classList.toggle('fa-eye');
+                    this.querySelector('i').classList.toggle('fa-eye-slash');
+                });
+            }
+            
+            // التحقق من صحة النموذج
+            const registerForm = document.getElementById('register-form');
+            if (registerForm) {
+                registerForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // التحقق من تطابق كلمتي المرور
+                    const password = document.getElementById('password').value;
+                    const confirmPassword = document.getElementById('confirm-password').value;
+                    
+                    if (password !== confirmPassword) {
+                        alert('كلمتا المرور غير متطابقتين');
+                        return false;
+                    }
+                    
+                    // إضافة منطق إنشاء الحساب هنا
+                    console.log('تم إرسال نموذج إنشاء الحساب');
+                });
+            }
+        });
+    </script>
+    
+    <!-- Chat Widget Script -->
+    <script src="public/chat-widget.js"></script>
+</body>
+</html>
